@@ -1,7 +1,3 @@
-output "securityhub_account_v2s_id" {
-  description = "Map of id values across all securityhub_account_v2s, keyed the same as var.securityhub_account_v2s"
-  value       = { for k, v in aws_securityhub_account_v2.securityhub_account_v2s : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "securityhub_account_v2s_arn" {
   description = "Map of arn values across all securityhub_account_v2s, keyed the same as var.securityhub_account_v2s"
   value       = { for k, v in aws_securityhub_account_v2.securityhub_account_v2s : k => v.arn if v.arn != null && length(v.arn) > 0 }
